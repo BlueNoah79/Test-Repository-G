@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+<html>
+<title>Collectables</title>
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+<style>
+*{
+	font-family: 'Play', sans-serif;
+	color:#000000;}
+
+/*Structure Layout*/
+
+	#pagewrap{
+		padding:5px;
+		width:960px;
+		margin:20px auto;
+	}
+	header{
+		height: 100px;
+		padding:0 15px;
+	}
+	#content{
+		width:290px;
+		float:left;
+		padding: 5px 15px;
+	}
+	#middle{
+		width:294px;
+		float:left;
+		padding:5px 15px;
+		margin:0px 5px 5px 5px;
+	}
+	#sidebar{
+		width:270px;
+		padding:5px 15px;
+		float:left;
+	}
+	#footer{
+		clear:both;
+		padding:0 15px;
+	}
+/*******************************************************
+	MEDIA QUERIES
+*******************************************************/
+/*For 980px or less*/
+
+
+@media screen and (max-width: 980px){
+	#pagewrap{
+		width:94%;
+	}
+	#content{
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle{
+		width:41%;
+		padding:1%4%;
+		margin:0px 0px 5px 5px;
+		float:right;
+	}
+	header,footer{
+		padding:1%4%;
+	}
+}
+
+/*For 600px or less*/
+@media screen and (max-width: 600px){
+	#content{
+		width:auto;
+		float:none;
+	}
+	#middle{
+		width:auto;
+		float:none;
+		margin-left:0px;
+	}
+	#sidebar{
+		width:auto;
+		float:none;
+	}
+}
+
+/*For 480px or less*/
+@media screen and (max-width: 480px){
+	header{
+		height:auto;
+	}
+	h1{
+		font-size:2em;
+	}
+	#sidebar{
+		background:#000000;
+	}
+	header,#content,#middle,#sidebar{
+		margin-bottom: 5px;
+	}
+	#pagewrap,header,#content,#middle,#sidebar,footer{
+		border:solid 1px #ccc;
+	}
+}
+
+
+ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow: hidden;
+	background-color:#ff2100;
+}
+
+li{
+	float:left;
+}
+li a{
+	display:block;
+	color:white;
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:none;
+}
+
+/*Change the link color on hover*/
+li a:hover{
+	background-color:#faff00;
+}
+</style>
+
+	</head>
+	<body>
+	<div id="pagewrap">
+	<header>
+		<h1 algin="center">Collectables</h1>
+	</header>
+	<ul>
+	<li><a href="store.html">Home</a></li>
+	<li><a href="collect.html">Collectibles</a></li>
+	<li><a href="disc.hmtl">DVD and Blu-Ray</a></li>
+	<li><a href="book.html">Books</a></li>
+	</ul>
+
+	<section id="content" align="center">
+	<h2>Area 88: Shin Kazama's F-8E Model Kit</h2>
+	<img src="img/ShinF8.jpg" style="width:280px;height:180px">
+	<p>1:48 Scale model of Shin's F-8E Crusader from the manga and anime "Area 88"</p>
+	<p>$39.99</p>
+
+	<h2>Tomica Mach 5</h2>
+	<img src="img/mach5.jpg" style="width:250px;height:175px">
+	<p>Special edition Tomica die-cast of the Mach 5 from the manga and anime "Mach Go Go Go", AKA Speed Racer</p>
+	<p>$14.99</p>
