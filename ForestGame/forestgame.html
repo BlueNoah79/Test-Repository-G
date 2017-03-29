@@ -45,6 +45,10 @@ blockedPathMessages[6]="The river is too deep";
 blockedPathMessages[7]="The forest is too thick";
 blockedPathMessages[8]="This way unnerves you...";
 
+var items = ["flute","stone","sword"];
+var itemsLocation = [1, 6, 8];
+var backpack=[];
+
 var itemsIknow = ["flute","stone","sword"];
 var item="";
 //Default starting location
@@ -178,13 +182,28 @@ function takeItem(){
 		itemsLocation.splice(itemIndexNumber, 1)
 	}else{
 		gameMessage= "You can't do that";
+}
+}
+
+function dropItem(){
+	if(backpack.length !==0){
+	var backpackIndexNumber = backpack.indexOf(item);
+	
+	if(backpackIndexNumber !==-1){
+		gameMessage= "You drop the " +item+",";
+		items.push(backpack[backpackIndexNumber]);
+		itemsLocation.push(mapLocation);
+		backpack.splice(backpackIndexNumber);
 	}else{
-	gameMessage= "You're not carrying anything";
+		gameMessage= "You can't do that";
+	}
+}else{
+		gameMessage= "You're not carrying anything";
 }
 }
 
 function useItem(){
-	var backpackIndexNumber = backpack.indexOf(item);
+	var backpackIndexNumber= backpack.indexOf(item);
 	if(backpackIndexNumber === -1){
 		gameMessage="You're not carrying it";
 	}
