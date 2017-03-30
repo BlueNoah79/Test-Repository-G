@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html align= "center">
 <head>
-	<title>Forest Game Test</title>
+	<title>My Game</title>
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+	<style>
+	*{
+	font-family: 'Play', sans-serif;
+	color:white;}
+	body{background-image: url("images/sor city.png");}
+	div{
+		position:relative;
+		top:50%;
+		transform: translateY(50%);
+	}
+	button, input{
+		background-color:red;
+	}
+	</style>
 </head>
 <body>
+<div>
 <img src="" width="300px" height="267px">
 <p id="output"></p>
 <input id = "input" type = "text" placeholder="Enter Action">
 <button> Enter</button>
-
+</div>
 <script>
 var map=[];
 
