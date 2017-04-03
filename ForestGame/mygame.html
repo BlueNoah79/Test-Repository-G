@@ -6,7 +6,7 @@
 	<style>
 	*{
 	font-family: 'Play', sans-serif;
-	color:white;}
+	color:yellow;}
 	body{background-image: url("images/sor city.png");}
 	div{
 		position:relative;
@@ -14,7 +14,7 @@
 		transform: translateY(50%);
 	}
 	button, input{
-		background-color:red;
+		background-color:purple;
 	}
 	</style>
 </head>
@@ -29,9 +29,9 @@
 var map=[];
 
 map[0]= " Old Stone Keep";
-map[1]="A Well";
+map[1]="The Train Station's Lockers";
 map[2]="Sunny Glade";
-map[3]="Sleeping Dragon";
+map[3]="Bionoid Attack Robot";
 map[4]="Narrow Path";
 map[5]="Old Gate";
 map[6]="Edge of a River";
@@ -41,9 +41,9 @@ var actionsIknow =["n","e","w","s","take item","drop item","use item"];
 
 var imgs =[];
 imgs[0]= "images/keep.png";
-imgs[1]= "images/well.png";
+imgs[1]= "images/japanlock.jpg";
 imgs[2]= "images/glade.png";
-imgs[3]= "images/dragon.png";
+imgs[3]= "images/gavan.png";
 imgs[4]= "images/path.png";
 imgs[5]= "images/gate.png";
 imgs[6]= "images/river.png";
@@ -52,9 +52,9 @@ imgs[8]= "images/cottage.png";
 
 var blockedPathMessages = [];
 blockedPathMessages[0]="It's too dangerous to go this way";
-blockedPathMessages[1]="Something holds you back...";
+blockedPathMessages[1]="This isn't the time to take the train...";
 blockedPathMessages[2]="Some thorns block the way";
-blockedPathMessages[3]="You can't walk over a dragon...";
+blockedPathMessages[3]="That would be suicide!";
 blockedPathMessages[4]="";
 blockedPathMessages[5]="The gate locks";
 blockedPathMessages[6]="The river is too deep";
@@ -175,7 +175,7 @@ function render(){
 
 	for(var i =0; i<items.length; i++){
 		if(mapLocation === itemsLocation[i]){
-			output.innerHTML += "<br> You see a <strong>" +items[i]
+			output.innerHTML += "<br> Your <strong>" +items[i]
 			+"</strong> here";
 		}
 	}
