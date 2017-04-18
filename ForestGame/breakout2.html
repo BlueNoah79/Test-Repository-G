@@ -34,6 +34,7 @@ var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth /2);
 var rightPressed = false
 var leftPressed = false;
+var Lives = 3;
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -87,9 +88,19 @@ function draw(){
 	drawPaddle();
 
 
-	if(y + dy > canvas.height - ballHeight || y+dy <ballHeight){
-		dy= -dy;
+	if(y+dy < ballHeight){
+		dy = - dy;
+	}else if (y+dy > canvas.height- ballHeight){
+		if (x>paddleX && x<paddleX + paddleWidth){
+			dy = -dy;
+		}else{
+
+		
+		alert("Game Over");
+		document.location.reload();
 	}
+}
+
 	if(x + dx > canvas.width - ballWidth || x+dx <ballWidth){
 		dx= -dx;
 	}
