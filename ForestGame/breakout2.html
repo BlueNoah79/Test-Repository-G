@@ -101,7 +101,7 @@ function drawBall(){
 function drawPaddle(){
 	ctx.beginPath();
 	ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-	ctx. fillstyle = "rgb(255, 72, 72)"
+	ctx. fillstyle = "red"
 	ctx.fill();
 	ctx.closePath();
 }
@@ -116,7 +116,13 @@ function drawBricks(){
 			bricks[c][r].y=brickY;
 			ctx.beginPath();
 			ctx.rect(brickX, brickY, brickWidth, brickHeight);
-			ctx.fillStyle= "aqua";
+			if (r== 0){
+				ctx.fillStyle= "aqua";
+			}else if (r== 1){
+				ctx.fillstyle= "pink";
+			}else{
+				ctx.fillstlye="red";
+			}
 			ctx.fill();
 			ctx.closePath();
 			}
@@ -152,8 +158,6 @@ function draw(){
 		if (x>paddleX && x<paddleX + paddleWidth){
 			dy = -dy;
 		}else{
-
-		
 		lives--;
 		if(!lives){
 		document.location.reload();
@@ -191,6 +195,9 @@ function collisionDetection(){
 				dy = -dy;
 				b.status = 0;
 				score++;
+				var audio = document.createElement("audio");
+				audio.src = "beep.wav"
+				audio.play()
 				if(score == brickRowCount * brickColumnCount){
 					alert("You Win");
 					document.location.reload();
