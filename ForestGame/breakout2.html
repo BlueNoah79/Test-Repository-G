@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html align= "center">
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
 	<title>Breakout</title>
 	<style>
+
+h1{font-family: 'Aldrich', sans-serif;
+color: orange;
+font-size: 10em;
+}
+
 	*{
 		padding:0;
 		margin:0;
@@ -13,10 +20,12 @@
 		margin:0 auto;
 	}
 
+	body{ background-image: url("superbreak.jpg"); }
+
 	</style>
 </head>
 <body>
-
+<h1>Breakout</h1>
 
 <canvas id = "myCanvas" width="480" height="320"></canvas>
 
@@ -101,7 +110,7 @@ function drawBall(){
 function drawPaddle(){
 	ctx.beginPath();
 	ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-	ctx. fillstyle = "red"
+	ctx. fillStyle = "red";
 	ctx.fill();
 	ctx.closePath();
 }
@@ -117,11 +126,11 @@ function drawBricks(){
 			ctx.beginPath();
 			ctx.rect(brickX, brickY, brickWidth, brickHeight);
 			if (r== 0){
-				ctx.fillStyle= "aqua";
-			}else if (r== 1){
-				ctx.fillstyle= "pink";
+				ctx.fillStyle= "blue";
+			}else if(r== 1){
+				ctx.fillStyle= "yellow";
 			}else{
-				ctx.fillstlye="red";
+				ctx.fillStyle="red";
 			}
 			ctx.fill();
 			ctx.closePath();
